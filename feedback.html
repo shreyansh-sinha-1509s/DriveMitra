@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Feedback – DriveMitra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.jpeg" height="36" width="44" alt="DriveMitra Logo" style="border-radius:6px;">
+    <span class="logo-name">DriveMitra</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="slip.html">Slip Generator</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="route.html">Route</a>
+    <a href="login.html" class="btn-nav-outline" id="authLink">Login / Signup</a>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      <span class="theme-icon-moon">🌙</span>
+      <span class="theme-icon-sun">☀️</span>
+    </button>
+  </nav>
+</header>
+
+<div class="form-container">
+  <h2>Customer Feedback</h2>
+
+  <input id="slipId" placeholder="Slip ID">
+  <input id="customerNameFb" placeholder="Customer Name">
+  <input id="customerLocation" placeholder="Customer Location">
+  <input id="driverNameFb" placeholder="Driver Name">
+  <input id="itemDelivered" placeholder="Item Delivered">
+  <input id="quantityFb" placeholder="Quantity">
+  <textarea id="comment" placeholder="Comment (optional)" rows="3" style="resize:vertical;"></textarea>
+
+  <div class="star-rating">
+    <input type="radio" name="rating" id="star5" value="5">
+    <label for="star5">★</label>
+    <input type="radio" name="rating" id="star4" value="4">
+    <label for="star4">★</label>
+    <input type="radio" name="rating" id="star3" value="3">
+    <label for="star3">★</label>
+    <input type="radio" name="rating" id="star2" value="2">
+    <label for="star2">★</label>
+    <input type="radio" name="rating" id="star1" value="1">
+    <label for="star1">★</label>
+  </div>
+
+  <button onclick="submitFeedback()">Submit Feedback</button>
+</div>
+
+<script src="app.js" defer></script>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="logo.jpeg" height="28" width="34" alt="logo">
+          <strong>DriveMitra</strong>
+        </div>
+        <p class="footer-tagline">Simplifying local deliveries for tempo drivers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="slip.html">Slip Generator</a>
+        <a href="route.html">Route Tracker</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">← Home</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 DriveMitra · Created by Shreyansh Sinha</span>
+      <a href="index.html" class="footer-home-link">← Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

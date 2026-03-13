@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Registration – DriveMitra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.jpeg" height="36" width="44" alt="DriveMitra Logo" style="border-radius:6px;">
+    <span class="logo-name">DriveMitra</span>
+  </div>
+  <nav>
+    <a href="index.html">← Home</a>
+    <a href="login.html" class="btn-nav-outline">Login</a>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      <span class="theme-icon-moon">🌙</span>
+      <span class="theme-icon-sun">☀️</span>
+    </button>
+  </nav>
+</header>
+
+<div class="login-page">
+  <div class="login-box">
+    <h2>Create Account</h2>
+    <p>Register as a new driver to get started.</p>
+    <input type="text" id="name" placeholder="Driver Name">
+    <input type="text" id="vehicle" placeholder="Vehicle Number">
+    <input type="text" id="mobile" placeholder="Mobile Number">
+    <div id="formMessage" class="form-message"></div>
+    <button onclick="register()">Create Account</button>
+    <p style="margin-top:16px; font-size:13px; color:#6b7280;">
+      Already have an account? <a href="login.html" style="color:#1e3a5f; font-weight:600;">Login</a>
+    </p>
+  </div>
+</div>
+
+<script src="app.js" defer></script>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="logo.jpeg" height="28" width="34" alt="logo">
+          <strong>DriveMitra</strong>
+        </div>
+        <p class="footer-tagline">Simplifying local deliveries for tempo drivers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="slip.html">Slip Generator</a>
+        <a href="route.html">Route Tracker</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">← Home</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 DriveMitra · Created by Shreyansh Sinha</span>
+      <a href="index.html" class="footer-home-link">← Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

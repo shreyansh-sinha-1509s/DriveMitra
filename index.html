@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveMitra – Simplifying Local Deliveries</title>
+  <meta name="description"
+    content="DriveMitra simplifies local deliveries for tempo drivers with digital slips, real-time traffic updates, and customer feedback.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ─── HEADER ─── -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpeg" height="36" width="44" alt="DriveMitra Logo">
+      <span class="logo-name">DriveMitra</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="slip.html">Slip Generator</a>
+      <a href="route.html">Route</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="login.html" class="btn-nav-outline" id="authLink">Login / Signup</a>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeIcon" title="Toggle theme"
+        aria-label="Toggle theme">
+        <span class="theme-icon-moon">🌙</span>
+        <span class="theme-icon-sun">☀️</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="label-tag">Digital Delivery Platform</span>
+      <h1>Simplifying Local Deliveries<br><span class="text-green">for Tempo Drivers</span></h1>
+      <p class="hero-sub">Switch to digital slips, reduce congestion, and improve service quality without paperwork.
+      </p>
+      <div class="hero-btns">
+        <a href="register.html" class="btn-primary">Get Started Free</a>
+        <a href="slip.html" class="btn-secondary">Generate a Slip</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="dashboard-mockup">
+        <div class="mockup-header">
+          <span class="mockup-dot red"></span>
+          <span class="mockup-dot yellow"></span>
+          <span class="mockup-dot green"></span>
+          <span class="mockup-title">DriveMitra Dashboard</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-stat">
+            <div class="mockup-stat-num">24</div>
+            <div class="mockup-stat-label">Slips Today</div>
+          </div>
+          <div class="mockup-stat">
+            <div class="mockup-stat-num">4.8</div>
+            <div class="mockup-stat-label">Avg Rating</div>
+          </div>
+          <div class="mockup-stat">
+            <div class="mockup-stat-num">12</div>
+            <div class="mockup-stat-label">Routes</div>
+          </div>
+        </div>
+        <div class="mockup-row">
+          <span class="mockup-badge green">SLIP-1749401</span>
+          <span>Andheri East</span>
+          <span class="mockup-badge blue">Delivered</span>
+        </div>
+        <div class="mockup-row">
+          <span class="mockup-badge green">SLIP-1749312</span>
+          <span>Vasai West</span>
+          <span class="mockup-badge yellow">Pending</span>
+        </div>
+        <div class="mockup-row">
+          <span class="mockup-badge green">SLIP-1749208</span>
+          <span>Bhayandar</span>
+          <span class="mockup-badge blue">Delivered</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATS ─── -->
+  <section class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num" data-target="500">0</span><span class="stat-suf">+</span>
+      <span class="stat-label">Active Drivers</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="12000">0</span><span class="stat-suf">+</span>
+      <span class="stat-label">Slips Generated</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="98">0</span><span class="stat-suf">%</span>
+      <span class="stat-label">Satisfaction Rate</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="30">0</span><span class="stat-suf">+</span>
+      <span class="stat-label">Routes Tracked</span>
+    </div>
+  </section>
+
+  <!-- ─── PROBLEMS ─── -->
+  <section class="section">
+    <div class="section-inner">
+      <span class="label-tag">The Problem</span>
+      <h2>Issues Local Tempo Drivers Face</h2>
+      <p class="section-sub">Every day, drivers deal with these challenges without a digital solution.</p>
+      <div class="cards-3">
+        <div class="card">
+          <div class="card-icon-box">📄</div>
+          <h3>Lost Paper Slips</h3>
+          <p>Paper delivery slips often get misplaced causing confusion and disputes.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon-box">🚦</div>
+          <h3>Traffic &amp; Delays</h3>
+          <p>Drivers struggle to plan movement during peak congestion hours.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon-box">📭</div>
+          <h3>No Service Feedback</h3>
+          <p>Drivers cannot track their service quality or customer satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─── -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <span class="label-tag">How It Works</span>
+      <h2>Four Simple Steps</h2>
+      <p class="section-sub">A fully digital delivery workflow in minutes.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num-tag">01</div>
+          <h3>Driver Login</h3>
+          <p>Sign in with your name and vehicle number — no passwords needed.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num-tag">02</div>
+          <h3>Generate Slip</h3>
+          <p>Create a digital delivery slip in seconds with all customer details.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num-tag">03</div>
+          <h3>QR Feedback</h3>
+          <p>Customers scan a QR code to submit instant star ratings and comments.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num-tag">04</div>
+          <h3>Track Dashboard</h3>
+          <p>View all your slips, average rating, and customer feedback at a glance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ─── -->
+  <section class="section">
+    <div class="section-inner">
+      <span class="label-tag">Why DriveMitra</span>
+      <h2>Everything a Driver Needs</h2>
+      <div class="features-list">
+        <div class="feature-row">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Works Offline-First</h4>
+            <p>Minimal data usage, optimized for low-connectivity areas.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Secure &amp; Private</h4>
+            <p>Driver data stays on local secured servers — no third-party sharing.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Mobile Friendly</h4>
+            <p>Fully responsive design works on any phone or tablet.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Instant Slip Creation</h4>
+            <p>Generate a delivery slip in under 30 seconds from anywhere.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Live Traffic Updates</h4>
+            <p>Community-driven route status keeps you ahead of congestion.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Customer Ratings</h4>
+            <p>Build trust and improve service with every delivery rating.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="section bg-light">
+    <div class="section-inner">
+      <span class="label-tag">Testimonials</span>
+      <h2>What Drivers Are Saying</h2>
+      <div class="cards-3">
+        <div class="card testi">
+          <div class="testi-stars">★★★★★</div>
+          <p>"No more paper slip confusion! My customers love the QR feedback system."</p>
+          <div class="testi-author">Rajan K. · Bhayandar</div>
+        </div>
+        <div class="card testi">
+          <div class="testi-stars">★★★★★</div>
+          <p>"The traffic update feature saves me at least 20 minutes every evening."</p>
+          <div class="testi-author">Suresh P. · Mira Road</div>
+        </div>
+        <div class="card testi">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Finally a simple app that actually helps us tempo drivers. Highly recommended."</p>
+          <div class="testi-author">Anwar M. · Vasai</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ─── -->
+  <section class="cta-strip">
+    <div class="cta-inner">
+      <h2>Ready to Go Digital?</h2>
+      <p>Join hundreds of tempo drivers already using DriveMitra.</p>
+      <a href="register.html" class="btn-primary">Get Started Free</a>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <img src="logo.jpeg" height="28" width="34" alt="logo">
+            <strong>DriveMitra</strong>
+          </div>
+          <p class="footer-tagline">Simplifying local deliveries for tempo drivers — digital slips, live traffic, and
+            customer feedback in one place.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="slip.html">Slip Generator</a>
+          <a href="route.html">Route Tracker</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="feedback.html">Feedback</a>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">← Home</a>
+          <a href="slip.html">Slip Generator</a>
+          <a href="route.html">Route</a>
+          <a href="feedback.html">Feedback</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 DriveMitra · Created by Shreyansh Sinha</span>
+        <a href="index.html" class="footer-home-link">← Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script>
+    // Counter animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !e.target.dataset.counted) {
+          e.target.dataset.counted = '1';
+          document.querySelectorAll('.stat-num').forEach(el => {
+            const target = +el.dataset.target;
+            const step = Math.ceil(target / 50);
+            let cur = 0;
+            const t = setInterval(() => {
+              cur = Math.min(cur + step, target);
+              el.textContent = cur.toLocaleString();
+              if (cur >= target) clearInterval(t);
+            }, 25);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    const sb = document.querySelector('.stats-bar');
+    if (sb) obs.observe(sb);
+  </script>
+</body>
+
+</html>

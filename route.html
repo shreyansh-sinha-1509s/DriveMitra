@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Route Tracker – DriveMitra</title>
+  <meta name="description" content="Check live traffic conditions and submit real-time route updates on DriveMitra.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ─── HEADER ─── -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpeg" height="48" width="60" alt="DriveMitra Logo" style="border-radius:8px;">
+      <span class="logo-name">DriveMitra</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="slip.html">Slip Generator</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="#" class="btn-nav-outline" id="authLink">Login / Signup</a>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeIcon" title="Toggle theme"
+        aria-label="Toggle theme">
+        <span class="theme-icon-moon">🌙</span>
+        <span class="theme-icon-sun">☀️</span>
+      </button>
+    </nav>
+  </header>
+
+
+  <!-- ─── PAGE HEADER ─── -->
+  <section class="route-page-header">
+    <span class="label-tag">Live Traffic Intelligence</span>
+    <h1>Route Tracker</h1>
+    <p>Check real-time traffic conditions and help fellow drivers with live updates.</p>
+  </section>
+
+  <!-- ─── MAIN CONTENT ─── -->
+  <main class="route-main">
+
+    <!-- ─ Traffic Timeline ─ -->
+    <div class="route-panel">
+      <div class="route-panel-header">
+        <span class="route-panel-icon">⏱️</span>
+        <div>
+          <h2>Estimated Movement</h2>
+          <p class="panel-sub">Typical daily traffic pattern for local routes</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item tl-good">
+          <div class="tl-time">6 AM – 9 AM</div>
+          <div class="tl-bar-wrap">
+            <div class="tl-bar" style="width:20%"></div>
+          </div>
+          <span class="tl-badge badge-good">Good</span>
+        </div>
+        <div class="timeline-item tl-moderate">
+          <div class="tl-time">9 AM – 12 PM</div>
+          <div class="tl-bar-wrap">
+            <div class="tl-bar" style="width:55%"></div>
+          </div>
+          <span class="tl-badge badge-moderate">Moderate</span>
+        </div>
+        <div class="timeline-item tl-average">
+          <div class="tl-time">12 PM – 4 PM</div>
+          <div class="tl-bar-wrap">
+            <div class="tl-bar" style="width:70%"></div>
+          </div>
+          <span class="tl-badge badge-average">Average</span>
+        </div>
+        <div class="timeline-item tl-busy">
+          <div class="tl-time">4 PM – 8 PM</div>
+          <div class="tl-bar-wrap">
+            <div class="tl-bar" style="width:95%"></div>
+          </div>
+          <span class="tl-badge badge-busy">Busy</span>
+        </div>
+      </div>
+
+      <!-- Live clock indicator -->
+      <div class="live-indicator">
+        <span class="live-dot"></span>
+        <span id="currentTimeStatus">Checking current traffic...</span>
+      </div>
+    </div>
+
+    <!-- ─ Submit Update ─ -->
+    <div class="route-panel">
+      <div class="route-panel-header">
+        <span class="route-panel-icon">📡</span>
+        <div>
+          <h2>Driver Updates</h2>
+          <p class="panel-sub">Report live conditions on your current route</p>
+        </div>
+      </div>
+
+      <div class="route-form">
+        <label class="form-label">Route Name</label>
+        <div class="input-icon-wrap">
+          <span class="input-icon">📍</span>
+          <input type="text" id="routeName" placeholder="e.g. Bhayandar East, Vasai West…">
+        </div>
+
+        <label class="form-label">Traffic Status</label>
+        <div class="traffic-status-grid">
+          <label class="ts-option ts-good">
+            <input type="radio" name="trafficUpdate" value="Good">
+            <span class="ts-icon">🟢</span>Good
+          </label>
+          <label class="ts-option ts-moderate">
+            <input type="radio" name="trafficUpdate" value="Moderate">
+            <span class="ts-icon">🟡</span>Moderate
+          </label>
+          <label class="ts-option ts-average">
+            <input type="radio" name="trafficUpdate" value="Average">
+            <span class="ts-icon">🟠</span>Average
+          </label>
+          <label class="ts-option ts-busy">
+            <input type="radio" name="trafficUpdate" value="Busy" checked>
+            <span class="ts-icon">🔴</span>Busy
+          </label>
+        </div>
+
+        <button class="route-submit-btn" onclick="submitTrafficUpdateNew()">
+          <span>📤</span> Submit Update
+        </button>
+
+        <div id="trafficStatus" class="traffic-result hidden">
+          <span class="result-icon">✅</span>
+          <div id="trafficStatusText">No updates yet</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.jpeg" height="36" width="44" alt="logo"
+          style="border-radius:6px; vertical-align:middle; margin-right:8px;">
+        <strong>DriveMitra</strong>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="slip.html">Slip</a>
+        <a href="route.html">Route</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+      <div class="footer-copy">Created by Shreyansh Sinha · © 2025 DriveMitra</div>
+    </div>
+  </footer>
+
+  <script>
+    // ─ Live time indicator ─
+    function updateLiveStatus() {
+      const h = new Date().getHours();
+      const el = document.getElementById('currentTimeStatus');
+      if (!el) return;
+      let msg = '';
+      if (h >= 6 && h < 9) msg = '🟢 Currently 6–9 AM → Expected: Good';
+      else if (h >= 9 && h < 12) msg = '🟡 Currently 9 AM–12 PM → Expected: Moderate';
+      else if (h >= 12 && h < 16) msg = '🟠 Currently 12–4 PM → Expected: Average';
+      else if (h >= 16 && h < 20) msg = '🔴 Currently 4–8 PM → Expected: Busy';
+      else msg = '🟢 Off-peak hours → Expected: Good';
+      el.textContent = msg;
+    }
+    updateLiveStatus();
+
+    // ─ Route submit bridging radio buttons ─
+    function submitTrafficUpdateNew() {
+      const sel = document.querySelector('input[name="trafficUpdate"]:checked');
+      // Sync to the hidden select that app.js uses
+      const selectEl = document.getElementById('trafficUpdate');
+      if (selectEl && sel) selectEl.value = sel.value;
+      submitTrafficUpdate();
+    }
+
+    // After submit, show result panel
+    const origSubmit = window.submitTrafficUpdate;
+    window.submitTrafficUpdate = async function () {
+      await origSubmit?.();
+      const status = document.getElementById('trafficStatus');
+      if (status) status.classList.remove('hidden');
+    };
+  </script>
+
+  <!-- hidden select for app.js compatibility -->
+  <select id="trafficUpdate" style="display:none">
+    <option value="Good">Good</option>
+    <option value="Moderate">Moderate</option>
+    <option value="Average">Average</option>
+    <option value="Busy" selected>Busy</option>
+  </select>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="logo.jpeg" height="28" width="34" alt="logo">
+          <strong>DriveMitra</strong>
+        </div>
+        <p class="footer-tagline">Simplifying local deliveries for tempo drivers.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="slip.html">Slip Generator</a>
+        <a href="route.html">Route Tracker</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">← Home</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 DriveMitra · Created by Shreyansh Sinha</span>
+      <a href="index.html" class="footer-home-link">← Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
