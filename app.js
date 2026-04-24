@@ -476,3 +476,6 @@ async function loadDashboard() {
     console.error(error);
   }
 }
+
+
+window.toggleMenu = function() { const menu = document.getElementById('navMenu'); const btn = document.querySelector('.mobile-menu-btn'); if(menu) { menu.classList.toggle('open'); btn.textContent = menu.classList.contains('open') ? '?' : '?'; } };
