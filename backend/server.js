@@ -14,8 +14,11 @@ app.use("/api/slips", require("./routes/slips"));
 app.use("/api/feedback", require("./routes/feedback"));
 app.use("/api/traffic", require("./routes/traffic"));
 
+const path = require('path');
+app.use(express.static(path.join(__dirname, '..')));
+
 app.get("/", (req, res) => {
-  res.send("DriveMitra backend running");
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
