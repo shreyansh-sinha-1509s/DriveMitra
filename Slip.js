@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:3000/api";
+const API_BASE = "https://drivemitra-1.onrender.com/api";
 
 document.addEventListener("DOMContentLoaded", () => {
   const slipForm = document.getElementById("slipForm");
