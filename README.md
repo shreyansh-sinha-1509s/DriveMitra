@@ -147,12 +147,6 @@ Start Command: npm start
 
 ---
 
-## 📸 Preview
-
-*(Add screenshots here if available)*
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome!
@@ -169,4 +163,5 @@ If you found this project useful, please give it a ⭐ on GitHub — it really h
 ## 📬 Contact
 
 **Author:** Shreyansh Sinha
+
 📧 Reach out for collaboration or feedback
