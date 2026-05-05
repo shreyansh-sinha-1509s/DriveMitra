@@ -13,6 +13,8 @@ It provides real-time assistance, intuitive navigation support, and a clean, res
 
 Built with scalability and usability in mind, DriveMitra bridges the gap between drivers and essential local services.
 
+![DriveMitra Application Overview](https://img.shields.io/badge/Status-Active-success)
+
 ---
 
 ## 🚀 Features
